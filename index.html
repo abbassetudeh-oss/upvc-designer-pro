@@ -1,0 +1,71 @@
+<!doctype html><html lang="fa" dir="rtl"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#0b1933"><link rel="manifest" href="manifest.json">
+<title>UPVC Designer Pro v3</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#f4f7fa;color:#172033;font-family:Tahoma,Arial}
+header{background:#0b1933;color:white;padding:16px;position:sticky;top:0;z-index:5}.brand{font-size:21px;font-weight:bold}.brand span{color:#20c8a2}.sub{font-size:11px;color:#bcc7d8;margin-top:4px}
+.search{margin-top:12px;background:white;color:#777;border-radius:12px;padding:11px}.wrap{max-width:950px;margin:auto;padding:12px 12px 85px}
+.card{background:white;border:1px solid #e8edf2;border-radius:15px;padding:14px;margin:10px 0;box-shadow:0 2px 9px #0000000b}
+.hero{display:grid;grid-template-columns:1fr 1fr;gap:12px}.new{background:linear-gradient(135deg,#20c8a2,#159eb9);color:white;border-radius:17px;min-height:210px;display:flex;flex-direction:column;align-items:center;justify-content:center}.plus{background:white;color:#159e91;width:68px;height:68px;border-radius:16px;font-size:45px;text-align:center;margin:12px}
+.projects{background:#0b1933;color:white;border-radius:17px;padding:14px;min-height:210px}.project{border:1px solid #34435d;border-radius:9px;padding:8px;margin:7px 0}.project small{display:block;color:#bcc7d8;margin-top:3px}
+.tiles{display:grid;grid-template-columns:repeat(6,1fr);gap:8px}.tile{background:white;border:1px solid #e7ebef;border-radius:12px;padding:12px 5px;text-align:center}.ico{font-size:23px;display:block;margin-bottom:5px}
+.title{display:flex;justify-content:space-between;margin:18px 2px 7px}.title a{color:#079d83;font-size:12px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:9px}.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}
+label{font-size:11px;color:#667085;display:block;margin:6px 0 4px}input,select{width:100%;padding:10px;border:1px solid #d8dee7;border-radius:9px;background:white}button{border:0;border-radius:9px;padding:10px 13px;background:#0b1933;color:white;font-weight:bold;margin-top:8px}button.teal{background:#20c8a2;color:#06251e}button.gray{background:#64748b}
+.row{display:flex;gap:7px;flex-wrap:wrap}.row button{flex:1}.hidden{display:none}.muted{font-size:11px;color:#667085;line-height:1.9}
+table{width:100%;border-collapse:collapse;font-size:12px;margin-top:10px}th,td{border:1px solid #e2e7ed;padding:7px;text-align:center}th{background:#f1f5f9}
+nav{position:fixed;bottom:0;left:0;right:0;height:68px;background:#0b1933;display:grid;grid-template-columns:repeat(5,1fr);z-index:10}nav button{background:transparent;margin:0;border-radius:0;color:#dbe3ef;font-size:10px}nav .big{width:55px;height:55px;border-radius:50%;background:#20c8a2;color:white;margin:-16px auto 0;font-size:24px}
+@media(max-width:620px){.hero{grid-template-columns:1fr}.tiles{grid-template-columns:repeat(3,1fr)}.grid3{grid-template-columns:1fr 1fr}}
+</style></head><body>
+<header><div class="brand"><span>UPVC</span> Designer Pro</div><div class="sub">طراحی، محاسبه، قیمت‌گذاری و فاکتور در و پنجره دوجداره</div><div class="search">🔎 جستجوی مشتری، پروژه یا فاکتور...</div></header>
+<div class="wrap">
+<section id="home">
+<div class="hero"><div class="projects"><b>پروژه‌های اخیر</b><div id="recent"></div></div>
+<div class="new" onclick="show('design')"><b>پروژه جدید</b><div class="plus">+</div><b>شروع طراحی</b><small>پنجره یا درب</small></div></div>
+<div class="title"><b>دسترسی سریع</b></div><div class="tiles">
+<div class="tile" onclick="show('customers')"><span class="ico">👤</span>مشتریان</div><div class="tile" onclick="show('projects')"><span class="ico">📁</span>پروژه‌ها</div>
+<div class="tile" onclick="show('cuts')"><span class="ico">✂️</span>لیست برش</div><div class="tile" onclick="show('quotes')"><span class="ico">📋</span>پیش‌فاکتور</div>
+<div class="tile" onclick="show('invoices')"><span class="ico">🧾</span>فاکتور</div><div class="tile" onclick="show('materials')"><span class="ico">⚙️</span>مواد و یراق</div></div>
+<div class="title"><b>سیستم‌ها</b><a onclick="show('materials')">مشاهده همه</a></div><div class="tiles">
+<div class="tile"><b>Wintech 60</b><small>UPVC</small></div><div class="tile"><b>Wintech 70</b><small>UPVC</small></div>
+<div class="tile"><b>Aluminium TT</b><small>ترمال‌بریک</small></div><div class="tile"><b>Aluminium ST</b><small>نرمال</small></div><div class="tile">＋<br>سیستم جدید</div></div>
+<div class="title"><b>انواع در و پنجره</b></div><div class="tiles">
+<div class="tile">▣<br>ثابت</div><div class="tile">◩<br>کلنگی</div><div class="tile">◫<br>تک‌حالته</div><div class="tile">◨<br>دوحالته</div><div class="tile">▥<br>دولنگه</div><div class="tile">▤<br>کشویی</div></div>
+<div class="title"><b>مواد و یراق</b></div><div class="tiles">
+<div class="tile">▣<br>پروفیل</div><div class="tile">▱<br>تقویتی</div><div class="tile">▯<br>شیشه</div><div class="tile">⌁<br>یراق</div><div class="tile">⌇<br>لاستیک/زهوار</div><div class="tile">⚙<br>پیچ</div></div>
+</section>
+
+<section id="design" class="hidden"><div class="card"><h3>طراحی جدید</h3>
+<div class="grid"><div><label>نام</label><input id="name" value="پنجره جدید"></div><div><label>سیستم</label><select id="sys"><option>Wintech 60</option><option>Wintech 70</option><option>UPVC سفارشی</option><option>Aluminium</option></select></div>
+<div><label>نوع</label><select id="model"><option>ثابت</option><option>کلنگی</option><option>تک‌حالته</option><option>دوحالته</option><option>دولنگه تک‌حالته</option><option>کشویی دو لنگه</option><option>کشویی سه لنگه</option><option>درب سرویس</option><option>درب ورودی</option><option>ترکیبی</option></select></div>
+<div><label>تعداد</label><input id="qty" type="number" value="1"></div><div><label>عرض بیرونی mm</label><input id="w" type="number" value="1260"></div><div><label>ارتفاع بیرونی mm</label><input id="h" type="number" value="1660"></div></div>
+<div class="row"><button class="teal" onclick="createProject()">ذخیره و محاسبه</button><button class="gray" onclick="show('home')">انصراف</button></div></div>
+<div class="card"><h3>پیش‌نمایش</h3><div id="drawing" style="height:230px;text-align:center;padding:25px">ابعاد را وارد کنید و ذخیره بزنید.</div></div></section>
+
+<section id="calc" class="hidden"><div class="card"><h3>محاسبه مواد</h3><div id="calcBox"></div></div></section>
+<section id="cuts" class="hidden"><div class="card"><h3>بهینه‌سازی برش شاخه ۶ متری</h3><div class="grid3"><div><label>طول شاخه</label><input id="stock" type="number" value="6000"></div><div><label>تیغه</label><input id="kerf" type="number" value="3"></div><div><label>حداقل پرت قابل استفاده</label><input id="off" type="number" value="100"></div></div><button class="teal" onclick="optimize()">محاسبه برش</button><div id="cutBox"></div></div></section>
+<section id="materials" class="hidden"><div class="card"><h3>بانک پروفیل و یراق</h3><button class="teal" onclick="addMaterial()">+ افزودن</button><div id="matBox"></div></div></section>
+<section id="customers" class="hidden"><div class="card"><h3>مشتریان</h3><div class="grid"><input id="cn" placeholder="نام مشتری"><input id="cp" placeholder="تلفن"></div><button onclick="addCustomer()">ثبت</button><div id="custBox"></div></div></section>
+<section id="projects" class="hidden"><div class="card"><h3>پروژه‌ها</h3><div id="projBox"></div></div></section>
+<section id="quotes" class="hidden"><div class="card"><h3>پیش‌فاکتور</h3><p class="muted">پروژه پس از انتخاب مواد و قیمت‌ها در اینجا به پیش‌فاکتور تبدیل می‌شود.</p></div></section>
+<section id="invoices" class="hidden"><div class="card"><h3>فاکتور</h3><p class="muted">فاکتور فروش از پروژه تأییدشده ساخته می‌شود.</p></div></section>
+</div>
+<nav><button onclick="show('home')">⌂<br>خانه</button><button onclick="show('calc')">▦<br>محاسبه</button><button class="big" onclick="show('design')">✎</button><button onclick="show('invoices')">▤<br>گزارش</button><button onclick="show('materials')">⚙<br>بانک اطلاعات</button></nav>
+<script>
+const KEY='upvc_v3_db';let db=JSON.parse(localStorage.getItem(KEY)||'null')||{projects:[],customers:[],materials:[]};
+const save=()=>{localStorage.setItem(KEY,JSON.stringify(db));render()};
+function show(id){document.querySelectorAll('section').forEach(x=>x.classList.add('hidden'));document.getElementById(id).classList.remove('hidden');render()}
+function parts(p){let a=[['فریم افقی',p.w,2*p.q],['فریم عمودی',p.h,2*p.q]],sw=p.w-120,sh=p.h-120;
+if(['کلنگی','تک‌حالته','دوحالته'].includes(p.model))a.push(['لنگه افقی',sw,2*p.q],['لنگه عمودی',sh,2*p.q]);
+if(p.model==='دولنگه تک‌حالته')a.push(['لنگه افقی',p.w/2-120,4*p.q],['لنگه عمودی',sh,4*p.q],['مولیون',p.h,p.q]);
+if(p.model.includes('کشویی'))a.push(['لنگه افقی',p.w/2-100,4*p.q],['لنگه عمودی',p.h-100,4*p.q]);
+if(p.model.includes('درب'))a.push(['لنگه افقی',p.w-140,2*p.q],['لنگه عمودی',p.h-140,2*p.q]);return a}
+function createProject(){let p={name:document.getElementById('name').value,sys:document.getElementById('sys').value,model:document.getElementById('model').value,q:+document.getElementById('qty').value||1,w:+document.getElementById('w').value,h:+document.getElementById('h').value};p.area=p.w*p.h/1e6*p.q;p.parts=parts(p);db.projects.unshift(p);db.projects=db.projects.slice(0,50);save();openCalc(p)}
+function openCalc(p){show('calc');document.getElementById('calcBox').innerHTML='<div class="grid3"><div><small>سیستم</small><b>'+p.sys+'</b></div><div><small>مدل</small><b>'+p.model+'</b></div><div><small>مساحت</small><b>'+p.area.toFixed(2)+' m²</b></div></div><table><tr><th>قطعه</th><th>طول mm</th><th>تعداد</th></tr>'+p.parts.map(x=>'<tr><td>'+x[0]+'</td><td>'+Math.round(x[1])+'</td><td>'+x[2]+'</td></tr>').join('')+'</table><p class="muted">فرمول‌های دقیق هر برند باید قبل از تولید در بانک سیستم تعریف شوند.</p>';document.getElementById('drawing').innerHTML='<div style="width:min(90%,330px);height:170px;border:7px solid #26364f;margin:auto;position:relative"><b style="position:absolute;bottom:-30px;left:0;right:0">'+p.w+' × '+p.h+' mm</b></div>'}
+function optimize(){let p=db.projects[0];if(!p)return;let s=+stock.value||6000,k=+kerf.value||3,a=[];p.parts.forEach(x=>{for(let i=0;i<x[2];i++)a.push({n:x[0],l:Math.round(x[1])})});a.sort((x,y)=>y.l-x.l);let b=[];a.forEach(x=>{let z=b.find(q=>q.r>=x.l+(q.a.length?k:0));if(!z){z={r:s,a:[]};b.push(z)}z.r-=x.l+(z.a.length?k:0);z.a.push(x)});cutBox.innerHTML='<table><tr><th>شاخه</th><th>برش</th><th>باقی</th></tr>'+b.map((x,i)=>'<tr><td>'+(i+1)+'</td><td>'+x.a.map(q=>q.n+' '+q.l).join(' + ')+'</td><td>'+x.r+' mm</td></tr>').join('')+'</table>'}
+function addMaterial(){let n=prompt('نام پروفیل/یراق');if(!n)return;let t=prompt('نوع','یراق'),p=+prompt('قیمت','0')||0;db.materials.push({n,t,p});save()}
+function addCustomer(){let n=cn.value;if(!n)return;db.customers.push({n,p:cp.value});save()}
+function render(){recent.innerHTML=db.projects.slice(0,3).map((p,i)=>'<div class="project" onclick="openCalc(db.projects['+i+'])"><b>'+p.name+'</b><small>'+p.w+'×'+p.h+' | '+p.model+'</small></div>').join('')||'<p class="muted" style="color:#bcc7d8">هنوز پروژه‌ای ثبت نشده.</p>';projBox.innerHTML=db.projects.map(p=>'<div class="card"><b>'+p.name+'</b><p class="muted">'+p.sys+' | '+p.model+' | '+p.w+'×'+p.h+'</p></div>').join('')||'<p class="muted">پروژه‌ای نیست.</p>';custBox.innerHTML=db.customers.map(x=>'<div class="project"><b>'+x.n+'</b><small>'+x.p+'</small></div>').join('')||'<p class="muted">مشتری ثبت نشده.</p>';matBox.innerHTML='<table><tr><th>نام</th><th>نوع</th><th>قیمت</th></tr>'+db.materials.map(x=>'<tr><td>'+x.n+'</td><td>'+x.t+'</td><td>'+x.p.toLocaleString()+'</td></tr>').join('')+'</table>'}
+render();if('serviceWorker'in navigator)navigator.serviceWorker.register('sw.js');
+</script></body></html>
